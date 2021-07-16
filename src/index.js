@@ -5,12 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 function render(props) {
+  const { container } = props;
+
+  const reactContainer = container ? container.querySelector('#root') : document.querySelector('#root')
 
   return ReactDOM.render(
     <React.StrictMode>
       <App />
     </React.StrictMode>,
-    document.getElementById('root')
+    reactContainer
   );
 }
 
